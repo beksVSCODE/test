@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#__next {
+    height: 100%;
+    width: 100%;
+}
+
+.light-theme {
+    background-color: #fff;
+    color: #2f2c42;
+}
+
+.dark-theme {
+    background-color: #302c42;
+    color: #fff;
+}
+
+.contact-gradient {
+    border-radius: 90px;
+    background: radial-gradient(2900.76% 50.13% at 50% 53.89%,
+            rgba(58, 52, 86, 0.95),
+            rgba(33, 30, 46, 1));
+    box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
+}
+
+.why-hydra-gradient {
+    border-radius: 40px;
+    background: radial-gradient(50% 50% at 50% 50%, #433d60 0%, #211e2e 100%);
+}
+
+.form-line {
+    background: linear-gradient(to right,
+            #343045,
+            #c0b7e8 34.9%,
+            #8176af 68.75%,
+            #343045);
+}
+
+.form-gradient {
+    border-radius: 100px;
+    background: radial-gradient(50% 50% at 50% 50%, #403a5f 0%, #211e2e 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 639px) {
+    .form-gradient {
+        border-radius: 60px;
+    }
+}
+
+.text-gradient {
+    background: linear-gradient(269deg, #c0b7e8 -3.72%, #8176af 82.17%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.burger-gradient {
+    background: radial-gradient(50% 50% at 50% 50%, #433d60 0%, #211e2e 100%);
+}
+
+.button-gradient {
+    background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+}
+
+.techno-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/tech-bgc.png');
+    background-position: center;
+    backgrouns-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 160px;
+    box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
+}
+
+@media (max-width: 768px) {
+    .techno-bg {
+        border-radius: 60px;
+    }
+}
+
+.build-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/icons/how-we-build-line.svg');
+    background-position: center;
+    backgrouns-size: contain;
+    background-repeat: no-repeat;
+    top: -50px;
+}
+
+@media (max-width: 1030px) {
+    .build-bg {
+        display: none;
+    }
+}
+
+.main-left-line {
+    position: absolute;
+    max-width: 735px;
+    width: 100%;
+    height: 530px;
+    background-image: url('/icons/main-left-line.svg');
+    background-position: center;
+    backgrouns-size: cover;
+    background-repeat: no-repeat;
+    top: 10%;
+    right: -2%;
+}
+
+.main-top-line {
+    position: absolute;
+    max-width: 377px;
+    width: 100%;
+    height: 845px;
+    background-image: url('/icons/main-top-line.svg');
+    background-position: center;
+    backgrouns-size: contain;
+    background-repeat: no-repeat;
+    top: -50%;
+    right: 0;
+}
+
+.main-right-line {
+    position: absolute;
+    max-width: 415px;
+    width: 100%;
+    height: 669px;
+    background-image: url('/icons/main-right-line.svg');
+    background-position: center;
+    backgrouns-size: contain;
+    background-repeat: no-repeat;
+    top: -20%;
+    right: 0;
+}
+
+@media (max-width: 1030px) {
+
+    .main-top-line,
+    .main-left-line,
+    .main-right-line {
+        display: none;
+    }
+}
+
+.footer-vertical {
+    background: linear-gradient(to bottom,
+            #343045,
+            #343045,
+            #c0b7e8 34.9%,
+            #8176af 68.7%,
+            #343045 99.5%);
+}
+
+.footer-line {
+    background: linear-gradient(to right,
+            #343045,
+            #c0b7e8 34.9%,
+            #8176af 68.7%,
+            #343045 100%);
+}
+
+.footer-top-line,
+.footer-center-line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    backgrouns-size: contain;
+    background-repeat: no-repeat;
+}
+
+.footer-top-line {
+    background-image: url('/icons/footer-top-line.svg');
+    top: -85%;
+    left: 0;
+    z-index: -1;
+}
+
+.footer-center-line {
+    background-image: url('/icons/footer-center-line.svg');
+    top: -20%;
+    left: 0;
+    z-index: -1;
+}
