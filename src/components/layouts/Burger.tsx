@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React { useState } from 'react';
+import React,{ useState } from 'react';
 import { Nav } from './Nav';
 
 export const Burger: React.FC = () => {
