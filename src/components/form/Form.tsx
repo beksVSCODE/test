@@ -1,10 +1,15 @@
 import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { toast } from 'react-toastify';
+import emailjs from 'emailjs-com';
 import { FormType } from '../../../types';
 import { FormInput } from './FormInput';
 import { Container } from '../layouts/Container';
 import { MainButton } from '../ui/MainButton';
+
+const serviceId = "service_0sr80th"
+const templateId = "template_num4pff"
+const userAccessId = "xj3MMzd8ktcZrdF3x"
 
 export const Form = () => {
     const {
@@ -16,13 +21,19 @@ export const Form = () => {
     } = useForm<FormType>({ defaultValues: { text: '' } });
 
     const onSubmit = async (data: FormType) => {
-        console.log(data);
         try {
-            toast.success('Successfully sended!');
+            const response = await emailjs.send(
+                serviceId,
+                templateId,
+                data,
+                userAccessId 
+              );
+
+              console.log({ response })
+            toast.success(`Успешно отправлено! Спасибо за обращение, ${data.firstName}`);
             reset();
         } catch (err) {
-            toast.success('Reference error. Try later.');
-            reset();
+            toast.error('Произошла непредвиденная ошибка, повторите или попробуйте позже');
         }
     };
 
