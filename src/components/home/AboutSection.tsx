@@ -2,10 +2,11 @@ import { FC } from 'react';
 import { Container } from '../layouts/Container';
 import { MainButton } from '../ui/MainButton';
 import { Titles } from '../ui/Titles';
-
 export const AboutSection: FC = () => {
     return (
         <section className="mb-24 max-md:mb-10">
+            <div>
+            </div>
             <Container classNameModificator="max-lg:flex-col flex items-center justify-between gap-10 max-lg:gap-5">
                 <div>
                     <img src="/images/about-img.png" alt="aboutimg" />
