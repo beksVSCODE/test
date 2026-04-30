@@ -12,7 +12,6 @@ export default defineConfig({
       noExternal: ["sonner"],
     },
     build: {
-      // Для Vercel
       target: "esnext",
     },
   },
